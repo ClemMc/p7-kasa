@@ -1,0 +1,45 @@
+@import './variables';
+@import './mixins';
+
+.aboutPage {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 1rem 19%;
+  margin-bottom: 30px;
+  flex-grow: 1;
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .headerImage {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+
+      .overlayText {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+  }
+}

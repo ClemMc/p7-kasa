@@ -1,0 +1,13 @@
+@import './variables';
+@import './mixins';
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  display: flex;   
+  flex-direction: column; 
+}
+
+.active {
+    text-decoration: underline!important;
+}
