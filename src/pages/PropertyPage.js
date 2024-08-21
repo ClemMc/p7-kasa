@@ -20,47 +20,49 @@ const PropertyPage = () => {
   }
 
   return (
-    <div className="propertyPage">
-      <Carousel pictures={logement.pictures} />
-      
-      <div className="propertyDetails">
-        <div className="propertyInfo">
-          <h1>{logement.title}</h1>
-          <h2>{logement.location}</h2>
-          <div className="tagsContainer">
-            {logement.tags?.map((tag, index) => (
-              <Tag key={index} name={tag} />
-            ))}
-          </div>
-        </div>
-
-        <div className="hostInfo">
-          <div className="host">
-            <span className="hostName">{logement.host.name}</span>
-            <img src={logement.host.picture} alt={logement.host.name} className="hostPicture" />
-          </div>
-          <Rating rating={logement.rating} />
-        </div>
-      </div>
-
-      <div className="collapseContainer">
-        {logement.description && (
-          <Collapse title="Description">
-            <p>{logement.description}</p>
-          </Collapse>
-        )}
-
-        {logement.equipments && (
-          <Collapse title="Équipements">
-            <ul>
-              {logement.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
+    <main className="propertyPage">
+      <article>
+        <Carousel pictures={logement.pictures} />
+        
+        <section className="propertyDetails">
+          <div className="propertyInfo">
+            <h1>{logement.title}</h1>
+            <h2>{logement.location}</h2>
+            <div className="tagsContainer">
+              {logement.tags?.map((tag, index) => (
+                <Tag key={index} name={tag} />
               ))}
-            </ul>
-          </Collapse>
-        )}
-      </div>
-    </div>
+            </div>
+          </div>
+
+          <section className="hostInfo">
+            <div className="host">
+              <span className="hostName">{logement.host.name}</span>
+              <img src={logement.host.picture} alt={logement.host.name} className="hostPicture" />
+            </div>
+            <Rating rating={logement.rating} />
+          </section>
+        </section>
+
+        <section className="collapseContainer">
+          {logement.description && (
+            <Collapse title="Description">
+              <p>{logement.description}</p>
+            </Collapse>
+          )}
+
+          {logement.equipments && (
+            <Collapse title="Équipements">
+              <ul>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </Collapse>
+          )}
+        </section>
+      </article>
+    </main>
   );
 };
 

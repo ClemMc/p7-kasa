@@ -16,7 +16,7 @@ const AboutPage = () => {
         document.title = 'À propos - Kasa';
     }, []);
   return (
-    <div className="aboutPage">
+    <main className="aboutPage">
       <Banner class='headerImage' img={aboutImage} alt="About" />
       <section className="sectionsContainer">
         {sections.map((section, index) => (
@@ -28,7 +28,7 @@ const AboutPage = () => {
           </Collapse>
         ))}
       </section>
-    </div>
+    </main>
   );
 };
 

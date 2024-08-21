@@ -11,7 +11,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className='homePage'>
+        <main className='homePage'>
             <Banner class='image' img={imgHome} alt="Slogan" overlayText="Chez vous, partout et ailleurs" />
             <section className="card-section">
                 <article className="card-container">
@@ -25,7 +25,7 @@ const HomePage = () => {
                     ))}
                 </article>
             </section>
-        </div>
+        </main>
     );
 };
 
