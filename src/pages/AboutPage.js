@@ -19,9 +19,8 @@ const AboutPage = () => {
     <main className="aboutPage">
       <Banner class='headerImage' img={aboutImage} alt="About" />
       <section className="sectionsContainer">
-        {sections.map((section, index) => (
+        {sections.map((section, ) => (
           <Collapse 
-            key={index} 
             title={section.title}
           >
             <p>{section.content}</p>
